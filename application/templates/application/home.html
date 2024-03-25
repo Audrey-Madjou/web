@@ -1,0 +1,35 @@
+{% extends 'authentification/entete.html' %}
+{% load static %}
+{% block title %} home {% endblock title %}
+{% block content %}
+<nav>
+    <ul>
+        <li><a href="{url 'application/home.html'}"></a>Home</li>
+        <li><a href="{url 'application/about.html'}"></a>About</li>
+    </ul>
+</nav>
+<p>{{ requests.user }} connecté(e)</p>
+
+<aside class = "sidebar col-sm-4 col-md-3">
+    <div class = "side-element">
+        {% for i in user_inscrip %}
+        <img src="{{ i.user_photo.url }}" alt="phtot_profil">
+        {% endfor %}
+        <ul class = "elements">
+            <li> {{ requests.user }} </li>
+            <li>Ajouter une image</li>
+            <li>Securite </li>
+            <li>
+                <p>
+                    <a href="{% url 'exit' %}">Deconnexion </a>
+                </p>
+            </li>
+          
+        </ul>
+    </div>
+</aside>
+{% endblock %}
+
+<footer>
+   
+</footer>

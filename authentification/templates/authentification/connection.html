@@ -1,0 +1,14 @@
+{% extends "authentification/entete.html" %}
+{% load static %}
+
+{% block title%} Connection {% endblock title %}
+{% block content %}
+<p> {{ message }} </p> 
+<form method="post">
+    {% csrf_token %}
+    {{ user_connect  }}
+    <button type="submit"> se connecter </button>
+</form>
+<p><a href="{% url 'inscription' %}">S'inscrire ?</a></p>
+
+{% endblock %}

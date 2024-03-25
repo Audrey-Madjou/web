@@ -1,0 +1,12 @@
+{% extends 'authentification/entete.html' %}
+{% load static %}
+{% block title %} About us {% endblock title  %}
+{% block content %}
+<nav>
+    <ul>
+        <li><a href="{% url 'Home' %}"></a>Home</li>
+        <li><a href="{% url 'about_us' %}"></a>About</li>
+    </ul>
+</nav>
+<p>Cette application simple a été dévéloppé par l'étudiante Madjou Audrey en formation chez SMART CODE ATLAS .Merci de votre visite !</p>
+{% endblock %}

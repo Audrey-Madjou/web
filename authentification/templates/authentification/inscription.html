@@ -1,0 +1,15 @@
+{% extends "authentification/entete.html" %}
+{% load static %}
+
+{% block title %} Inscription {% endblock title %}
+{% block content %}
+<p>essai</p>
+
+
+<form method="post" enctype="multipart/form-data" >
+    {% csrf_token %}
+    {{ user_inscrip.as_p  }}<!--.as_p permet d'ecrire les champs comme des paragraphes-->
+    <button type="submit"> s'inscrire</button>
+</form>
+
+{% endblock %}
